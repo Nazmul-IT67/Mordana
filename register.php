@@ -1,5 +1,4 @@
 <?php
-  include'header/nav.php';
   session_start();
 ?>
 <!DOCTYPE html>

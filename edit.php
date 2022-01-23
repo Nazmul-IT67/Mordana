@@ -74,6 +74,10 @@
                                 </span>
                                 </p>                                 
                             </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="butt">Update</button>
+                            </div>                             
                            
                         </form>
                     </div>
