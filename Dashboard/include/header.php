@@ -80,6 +80,13 @@
           </div><!-- menu-item -->
         </a>
 
+        <a href="#" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon icon icon fa fa-shower tx-20"></i>
+            <span class="menu-item-label">About Us</span>
+          </div><!-- menu-item -->
+        </a>
+
         <a href="service.php" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-pie-graph tx-20"></i>

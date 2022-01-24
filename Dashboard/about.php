@@ -1,10 +1,10 @@
-<?php
+<!-- 
   session_start();
   require_once'../db.php';
-  $select="SELECT * FROM portfolio";
-  $portfolio=mysqli_query($db, $select);
+  $select="SELECT * FROM aboutus";
+  $aboutus=mysqli_query($db, $select);
   include'include/header.php';
-?>
+
 <div class="br-mainpanel">
   <div class="pd-30">
     <h6 class="tx-gray-800 mg-b-5">
@@ -37,36 +37,25 @@
           <thead class="thead-light">
             <tr>
               <th>ID</th>
-              <th>Titlt</th>
-              <!-- <th>Summery</th> -->
               <th>Image</th>
-              <th>Status</th>
+              <th>Titlt</th>
+              <th>Paragrap</th>
+              <th>Icon</th>
+              <th>Summery</th>
             </tr>
           </thead>
           <tbody class="tx-white">
             <?php
-              foreach ($portfolio as $key => $value) {
+              foreach ($about as $key => $value) {
                 ?>
               <tr>
+                <td class="bg-dark">
+                  <img width="50" src="../assets/about/image/<?php echo $value['image'];?>">
+                </td>
                 <td class="bg-dark"><?php echo ++$key?></td>
                 <td class="bg-dark"><?php echo $value['title'];?></td>
-                <!-- <td class="bg-dark"><?php echo $value['summery'];?></td> -->
-                <td class="bg-dark">
-                  <img width="50" src="../assets/portfolio/image/<?php echo $value['image'];?>">
-                </td>
-                <!-- <td class="bg-dark"><?php echo $value['status'];?></td> -->
-                <td class="bg-dark"><?php
-                      if ($value['status']==1) {
-                        ?>
-                        <a href="#?status_id=<?php echo $value['id']?>" class="btn btn-secondary">Active</a>
-                        <?php
-                      }else{
-                        ?>
-                        <a href="#?status_id=<?php echo $value['id']?>" class="btn btn-danger">Deactive</a>
-                        <?php
-                      }
-                    ?>  
-                </td>
+                <td class="bg-dark"><?php echo $value['paragrap'];?></td>
+                <td class="bg-dark"><?php echo $value['summery'];?></td>
               </tr>
               <?php
               }
@@ -82,4 +71,4 @@
   </div>
 </footer>
 </div>
-<?php include'include/footer.php'?>
+<!-- <?php include'include/footer.php'?> -->

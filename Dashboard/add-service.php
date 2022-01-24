@@ -58,14 +58,13 @@
                 </div>               
                 <div class="form-group mg-b-10-force">
                   <label class="form-control-label">Icon: <span class="tx-danger">*</span></label>
-                  <select class="form-control" name="icon">
-                    <option label="Choose country"></option>
+                  <select class="form-control" name="icon" value="">
                     <option value="fa fa-headphones">WordPress</option>
                     <option value="fa fa-suitcase">Web Development</option>
                     <option value="fa fa-truck">Digital Marketing</option>
                     <option value="fa fa-rocket">Theme Customize</option>
                     <option value="fa fa-suitcase">SEO Optimization</option>
-                    <option value="fa fa-rocket">24/7 Support</option>
+                    <option value="fa fa-rocket">24/7 Support</option>                    
                   </select>
                 </div>
                 </div>

@@ -4,14 +4,13 @@
   require_once'../db.php';
   if($_SERVER['REQUEST_METHOD']=='POST'){
     $title      =$_POST['title'];
-    $description=$_POST['description'];
-    $category   =$_POST['category'];
+    // $summery   =$_POST['summery'];
     $image      =$_FILES['image'];
     $file=$image['tmp_name'];
     $des=$image['name'];
     if (move_uploaded_file($file, '../assets/portfolio/image/'. $des)) {
-        $insert="INSERT INTO portfolios(title, description, category, image) VALUES ('$title', '$description', '$category', '$des')";
-        if ($title && $description && $category && $image) {
+        $insert="INSERT INTO portfolio (title, image) VALUES ('$title', '$des')";
+        if ($title && $image) {
             mysqli_query($db, $insert);
             $_SESSION['message']='Portfolios Add Successfull';
         }
@@ -56,28 +55,28 @@
                   </div>
                 </div><!-- col-4 -->
 
-                <div class="col-lg-4">
+                <!--<div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Categoery: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="text" name="category" value="" placeholder="Portfolio Category" >
                   </div>
-                </div>                
+                </div>  -->               
 
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Summery: <span class="tx-danger">*</span></label>
-                    <input class="form-control" type="text" name="description" value="" placeholder="Portfolio Summery" >
+                    <input class="form-control" type="text" name="summery" value="" placeholder="Portfolio Summery" >
                   </div>
-                </div>                
+                </div>   -->              
 
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Image: <span class="tx-danger">*</span></label>
-                    <input class="form-control" type="file" name="image" value="">
+                    <input class="form-control" type="file" name="image">
                   </div>
                 </div>  
 
-<!--                 <div class="col-lg-4">
+                <!--<div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Featured Img: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="text" name="featured" value="" placeholder="Portfolio Thumbnail" >
