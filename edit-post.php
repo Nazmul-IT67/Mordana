@@ -26,7 +26,7 @@
 			$regex='/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
 			if (preg_match($regex, $email)) {
 				$_SESSION['email']=$email;
-				$select="SELECT COUNT(*) as total FROM php WHERE email='$email' ";
+				$select="SELECT COUNT(*) as total FROM users WHERE email='$email' ";
 				$users=mysqli_query($db, $select);
 				$count=mysqli_fetch_assoc($users);
 				if ($count['total']>0) {
@@ -45,7 +45,7 @@
 		}
 
 		if ($valid_name && $valid_email) {		
-			$insert="UPDATE php SET name='$valid_name', email='$valid_email' WHERE id=$id";
+			$insert="UPDATE users SET name='$valid_name', email='$valid_email' WHERE id=$id";
 			if (mysqli_query($db, $insert)) {
 				// header('location:user.php');
 				header('location:Dashboard/users.php');

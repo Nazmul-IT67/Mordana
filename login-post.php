@@ -6,7 +6,7 @@
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 
-		$select="SELECT COUNT(*) as total, name, email, password FROM php WHERE email='$email' ";
+		$select="SELECT COUNT(*) as total, name, email, password FROM users WHERE email='$email' ";
 		$quiry=mysqli_query($db, $select);
 		$assoc=mysqli_fetch_assoc($quiry);
 		if ($assoc['total']>0) {

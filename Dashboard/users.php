@@ -1,9 +1,9 @@
 <?php
   session_start();
   require_once'../db.php';
-  $select="SELECT * FROM php";
+  $select="SELECT * FROM users";
   $users=mysqli_query($db, $select);
-  $select2="SELECT COUNT(*) as total, name, email, phone FROM php";
+  $select2="SELECT COUNT(*) as total, name, email, phone FROM users";
   $users2=mysqli_query($db, $select2);
   $count=mysqli_fetch_assoc($users2);
   include'include/header.php';

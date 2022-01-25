@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2022 at 03:04 PM
+-- Generation Time: Jan 25, 2022 at 12:55 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -18,34 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `users`
+-- Database: `mordana`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `php`
---
-
-CREATE TABLE `php` (
-  `id` tinyint(3) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `php`
---
-
-INSERT INTO `php` (`id`, `name`, `email`, `phone`, `password`, `status`) VALUES
-(1, 'Nazmul Islam', 'nazmulns8989@gmail.com', '01940475267', '$2y$10$ywWf1FqgYy32tvzUpkWlPOgajNernHg84BmtW33/GEGZwHL.2xH5a', 1),
-(3, 'Hafizur Rahman', 'hafizur@gmail.com', '01940475267', '$2y$10$ODXTvPKgZZYhlFx9U41sR.poFV2QLgdTZy/9g1kwFU/Q7npAejSge', 1),
-(4, 'Alamin', 'alamin1@gmail.com', '01940475267', '$2y$10$Q0qW31dv5.aiaAMhCyT6EuMQl/YMguZrPHP0DQC0FfW1wFMIUsnza', 1),
-(5, 'Farabi Islam', 'farabi@gmail.com', '01940475267', '$2y$10$GMvs76XDi05GQbfkSyOQx.ruJiy8jBDU2PmNWQJr0IhX8t6fhPmHa', 1),
-(6, 'Nazmul Islam', 'nazmulsn8989@gmail.com', '01940475267', '$2y$10$RgdGNADpB/QksOuJXMX.5OjMz3AV6WrEelg/WwFi4UvMdH0Jt5D2O', 1);
 
 -- --------------------------------------------------------
 
@@ -92,15 +66,39 @@ INSERT INTO `services` (`id`, `title`, `description`, `summary`, `icon`, `status
 (3, 'Unlimited Support', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', '', 'bx bx-tachometer', 1),
 (4, 'WordPress Website', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', '', 'bx bx-world', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `status`) VALUES
+(1, 'Nazmul Islam', 'nazmul.cse67@gmail.com', '01940475267', '$2y$10$BjvS/1vWUto9vQOYAC6CgedAlCt3BarwtrcFNZzbRA/w3vRYz4.IG', 1),
+(2, 'Nazmul Talukder', 'nazmulns8989@gmail.com', '01889687828', '$2y$10$a8YCmWV6kX.BYV8LcRkSF.5EcJ1TeFMIylvflK2oyNNn1QnpB02JW', 1),
+(3, 'Farabi Islam', 'nazmulsn@gmail.com', '01638096733', '$2y$10$TgakP8cP4uGLY34DLtHqLOtTc4vYElf4OZCQ87FxqoiJL8K9axFlS', 1),
+(4, 'Farhan', 'nazmul.islam.spi33@gmail.com', '01795528329', '$2y$10$bB4CRt8V.HeLgA9giHIS4.rkEo3.o0QD3xxlCrvseMNrWqdi9xpV6', 1),
+(5, 'Hafizur Rahman', 'nazmul@gmail.com', '01775653568', '$2y$10$sNjt/3.xN0xxSxqIiu6.b.qAIpMN5ej7.0gEwL2M2JjjVneInjMCW', 1),
+(6, 'Alamin Sheak', 'alamin@gmail.com', '01920952727', '$2y$10$eDdvlBPit41FQeHplQD6E.AjinQEuNNrp.et.2U1TpTT6H.Z0RlJS', 1),
+(7, 'Taher Jony', 'taherjs@gmail.com', '01776011973', '$2y$10$DSk7IbCjnlGEidPVaNV15OAGqzQPogTRNVIZf8HoNvNVYsuzt4Q5q', 1),
+(8, 'Uzzal Ahmed', 'uzzal@gmail.com', '01795952800', '$2y$10$ZdnWs2V9E/isUQvGJNHCWutxSj.zHiGePK2eFtjnu9f2klqUnKdxm', 1),
+(9, 'Labonno', 'laboni@gmail.com', '0123456789', '$2y$10$k010VkwWQGAk5ohpSJ6JAO46vfcwuxn7.chy9QnpVBiciuw1bKauy', 1);
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `php`
---
-ALTER TABLE `php`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `portfolio`
@@ -115,14 +113,14 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `users`
 --
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for table `php`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `php`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `portfolio`
@@ -135,6 +133,12 @@ ALTER TABLE `portfolio`
 --
 ALTER TABLE `services`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

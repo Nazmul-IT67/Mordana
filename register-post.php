@@ -27,7 +27,7 @@
 			$regex='/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
 			if (preg_match($regex, $email)) {
 				$_SESSION['email']=$email;
-				$select="SELECT COUNT(*) as total FROM php WHERE email='$email' ";
+				$select="SELECT COUNT(*) as total FROM users WHERE email='$email' ";
 				$users=mysqli_query($db, $select);
 				$count=mysqli_fetch_assoc($users);
 				if ($count['total']>0) {
@@ -68,7 +68,7 @@
 			header('location:register.php');			
 		}
 		if ($valid_name && $valid_email && $valid_psaaword) {
-			$insert="INSERT INTO php(name, email, phone, password) VALUES ('$valid_name', '$valid_email', '$phone', '$valid_psaaword')";
+			$insert="INSERT INTO users(name, email, phone, password) VALUES ('$valid_name', '$valid_email', '$phone', '$valid_psaaword')";
 				mysqli_query($db, $insert);
 				header('location:login.php');
 		}else{

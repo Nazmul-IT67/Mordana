@@ -2,7 +2,7 @@
 	session_start();
 	require_once'db.php';
 	$id=$_GET['edit_id'];
-    $select="SELECT * FROM php WHERE id=$id";
+    $select="SELECT * FROM users WHERE id=$id";
     $quiry=mysqli_query($db, $select);
     $assoc=mysqli_fetch_assoc($quiry);
 	
