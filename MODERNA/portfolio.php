@@ -38,7 +38,6 @@
     <!-- ======= Our Portfolio Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Our Portfolio</h2>
           <ol>
@@ -46,7 +45,6 @@
             <li>Our Portfolio</li>
           </ol>
         </div>
-
       </div>
     </section><!-- End Our Portfolio Section -->
 
@@ -84,6 +82,25 @@
               <?php
             }
           ?>
+
+          <?php 
+            foreach($portfolio as $key=> $value){
+              ?>
+              <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
+                <div class="portfolio-item">
+                  <img src="../assets/portfolio/image/<?php echo$value['image']?>" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h3><?php echo $value['title'] ?></h3>
+                    <div>
+                      <a href="../assetsm/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                      <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+              <?php
+            }
+          ?>          
 
           <!-- <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
             <div class="portfolio-item">
