@@ -8,7 +8,7 @@
 	if ($assoc['status']==1) {
 		$users="UPDATE users SET status=2 WHERE id=$id";
 		if (mysqli_query($db, $users)) {
-			$_SESSION['changestatus']='Activated Successfull';
+			$_SESSION['changestatus']='Detivated Successfull';
 			header('location:users.php');
 		}
 	}else{

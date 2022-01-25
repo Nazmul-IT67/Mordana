@@ -1,5 +1,4 @@
 <?php
-  session_start();
   include'include/header.php';
   require_once'../db.php';  
   if ($_SERVER['REQUEST_METHOD']=='POST') {
@@ -66,7 +65,6 @@
                     <option value="fa fa-suitcase">SEO Optimization</option>
                     <option value="fa fa-rocket">24/7 Support</option>                    
                   </select>
-                </div>
                 </div>
                 <div class="form-layout-footer">
                   <button class="btn btn-info">Submit Form</button>

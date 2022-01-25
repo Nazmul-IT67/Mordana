@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  // session_start();
   require_once'../db.php';
   $select="SELECT * FROM users";
   $users=mysqli_query($db, $select);

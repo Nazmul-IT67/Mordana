@@ -4,7 +4,6 @@
   require_once'../db.php';
   if($_SERVER['REQUEST_METHOD']=='POST'){
     $title      =$_POST['title'];
-    // $summery   =$_POST['summery'];
     $image      =$_FILES['image'];
     $file=$image['tmp_name'];
     $des=$image['name'];
@@ -24,7 +23,7 @@
   <div class="pd-30">
     <h6 class="tx-gray-800 mg-b-5">
       <a class="tx-white" href="dashboard.php">Dashboard /</a>
-      <a class="tx-white" href="service.php">Services</a>
+      <a class="tx-white" href="service.php">Portfolios</a>
     </h6>
   </div>
   <div class="br-pagebody mg-t-5 pd-x-30">
@@ -93,10 +92,5 @@
       </div>
     </div>
   </div>
-  <footer class="br-footer">
-  <div class="footer-left">
-    <div class="tx-white" class="mg-b-2">Copyright &copy; 2017. All Rights Reserved By Nazmul Islam.</div>
-  </div>
-</footer>
 </div>
 <?php include'include/footer.php';?>
