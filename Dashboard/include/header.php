@@ -7,7 +7,7 @@
     <title>Nazmul_IT</title>
     <style type="text/css">
       body{
-        background:url(https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background:url(https://free4kwallpapers.com/uploads/originals/2015/08/25/website-background.jpg);
       }
       h1{
         color:white;
@@ -80,10 +80,10 @@
           </div><!-- menu-item -->
         </a>
 
-        <a href="#" class="br-menu-link">
+        <a href="features.php" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon icon fa fa-shower tx-20"></i>
-            <span class="menu-item-label">About Us</span>
+            <span class="menu-item-label">Features</span>
           </div><!-- menu-item -->
         </a>
 
@@ -100,6 +100,34 @@
             <span class="menu-item-label">Portfolios</span>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
+
+        <a href="about.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon fa fa-glass tx-20"></i>
+            <span class="menu-item-label">About Us</span>
+          </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
+        <a href="plan.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon fa fa-shield tx-20"></i>
+            <span class="menu-item-label">Our Plan</span>
+          </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
+        <a href="testimonial.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon fa fa-sliders tx-20"></i>
+            <span class="menu-item-label">Testimunial</span>
+          </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
+        <a href="team.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon fa fa-sitemap tx-20"></i>
+            <span class="menu-item-label">Team</span>
+          </div><!-- menu-item -->
+        </a><!-- br-menu-link -->        
 
         <a href="whyus.php" class="br-menu-link">
           <div class="br-menu-item">

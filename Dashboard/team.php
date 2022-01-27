@@ -1,14 +1,14 @@
 <?php
   require_once'../db.php';
-  $select="SELECT * FROM abouts";
-  $aboutus=mysqli_query($db, $select);
+  $select="SELECT * FROM teammembers";
+  $teammembers=mysqli_query($db, $select);
   include'include/header.php';
 ?>
 <div class="br-mainpanel">
   <div class="pd-30">
     <h6 class="tx-gray-800 mg-b-5">
       <a class="tx-white" href="dashboard.php">Dashboard /</a>
-      <a class="tx-white" href="#">About_Us</a>
+      <a class="tx-white" href="#">Team</a>
     </h6>
   </div>
 
@@ -17,9 +17,9 @@
       <div class="card mt-sm-3">     
         <table class="table table-bordered mt-30 text-center">
           <div class="text-center bg-dark">
-            <h2>About_Us</h2>
+            <h2>Team Members</h2>
           </div>         
-            <a class="text-right" href="add-about.php"><i class="fa fa-plus"></i>Add</a>          
+            <a class="text-right" href="add-member.php"><i class="fa fa-plus"></i>Add</a>          
           <?php
             if (isset($_SESSION['changestatus'])) {
               ?>
@@ -36,28 +36,28 @@
           <thead class="thead-light">
             <tr>
               <th>ID</th>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Description</th>
               <th>Image</th>
-              <th>Titlt</th>
-              <th>Icon</th>
-              <th>Summery</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody class="tx-white">
             <?php
-              foreach ($aboutus as $key => $value) {
+              foreach ($teammembers as $key => $member) {
                 ?>
-              <tr>
-                <td class="bg-dark"><?php echo ++$key?></td>
-                <td class="bg-dark">
-                  <img width="50" src="../assets/portfolio/about/<?php echo $value['image'];?>">
-                </td>                
-                <td class="bg-dark"><?php echo $value['title'];?></td>
-                <td class="bg-dark"><?php echo $value['icon'];?></td>
-                <td class="bg-dark"><?php echo $value['paragrap'];?></td>
-                <td class="bg-dark"><?php echo $value['status'];?></td>
-              </tr>
-              <?php
+                <tr>
+                  <td class="bg-dark"><?php echo ++$key?></td>
+                  <td class="bg-dark"><?php echo $member['name'];?></td>
+                  <td class="bg-dark"><?php echo $member['title'];?></td>
+                  <td class="bg-dark"><?php echo $member['description'];?></td>
+                  <td class="bg-dark">
+                    <img width="50" src="../assets/portfolio/members/<?php echo $member['image'];?>">
+                  </td>
+                  <td class="bg-dark"><?php echo $member['status'];?></td>
+                </tr>
+                <?php
               }
             ?>
           </tbody>

@@ -66,6 +66,7 @@
                     <option value="fa fa-rocket">24/7 Support</option>                    
                   </select>
                 </div>
+                </div>
                 <div class="form-layout-footer">
                   <button class="btn btn-info">Submit Form</button>
               </div>

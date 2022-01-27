@@ -1,6 +1,5 @@
 <?php
   include'mordana/header.php';
-  session_start();
   require_once'db.php';
   $select="SELECT * FROM portfolio";
   $portfolio=mysqli_query($db, $select);
@@ -56,9 +55,9 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
+              <!-- <li data-filter=".filter-app">App</li>
               <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-web">Web</li> -->
             </ul>
           </div>
         </div>
@@ -73,47 +72,15 @@
                   <div class="portfolio-info">
                     <h3><?php echo $value['title'] ?></h3>
                     <div>
-                      <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      <a href="assets/portfolio/image/<?php echo$value['image']?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App"><i class="bx bx-plus"></i></a>
+                      <a href="#" title="Portfolio Details"><i class="bx bx-link"></i></a>
                     </div>
                   </div>
                 </div>
               </div>              
               <?php
             }
-          ?>
-
-          <?php 
-            foreach($portfolio as $key=> $value){
-              ?>
-              <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-                <div class="portfolio-item">
-                  <img src="assets/portfolio/image/<?php echo$value['image']?>" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h3><?php echo $value['title'] ?></h3>
-                    <div>
-                      <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>              
-              <?php
-            }
-          ?>          
-
-          <!-- <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3>Web 1</h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
+          ?>                    
         </div>
       </div>
     </section><!-- End Portfolio Section -->

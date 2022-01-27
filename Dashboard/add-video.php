@@ -1,5 +1,4 @@
 <?php
-  session_start();
   include'include/header.php';
   require_once'../db.php';
   if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -60,7 +59,7 @@
                     <input class="form-control" type="text" name="url" value="" placeholder="Portfolio Title" >
                   </div>
                 </div><!-- col-4 --> 
-
+              </div>
                 <div class="form-layout-footer">
                   <button class="btn btn-info">Submit Form</button>
                 </div>  

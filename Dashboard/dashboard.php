@@ -11,10 +11,5 @@
       	<h1 class="tx-white">Wellcome To</h1>
       	<h3 class="tx-white text-center">My Dashboard</h3>
       </div><!-- br-pagebody -->
-      <footer class="br-footer">
-        <div class="footer-left">
-          <div class="tx-white" class="mg-b-2">Copyright &copy; 2017. All Rights Reserved By Nazmul Islam.</div>
-        </div>
-      </footer>
     </div><!-- br-mainpanel -->
 <?php include'include/footer.php'?>

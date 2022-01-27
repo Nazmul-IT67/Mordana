@@ -92,10 +92,5 @@
       </div>
     </div>
   </div>
-  <footer class="br-footer">
-  <div class="footer-left">
-    <div class="tx-white" class="mg-b-2">Copyright &copy; 2017. All Rights Reserved By Nazmul Islam.</div>
-  </div>
-</footer>
 </div>
 <?php include'include/footer.php'?>
