@@ -8,23 +8,14 @@
     $file       =$image['tmp_name'];
     $des        =$image['name'];
 
-    // if (move_uploaded_file($file, '../assets/portfolio/plan/'. $des)) {
-    //   $insert="INSERT INTO plan(title, description, image) VALUES ('$title', '$description' '$des')";
-    //   mysqli_query($db, $insert);
-    //   $_SESSION['message']='Add Successfull';  
-    // }else{
-    //   $_SESSION['message']='Add Error';
-    // }
-
     if (move_uploaded_file($file, '../assets/portfolio/plan/'. $des)) {
-        $insert="INSERT INTO ourplan(title, summery, image) VALUES ('$title', '$summery' '$des')";
-        if ($title && $summery && $image) {
-            mysqli_query($db, $insert);
-            $_SESSION['message']='Add Successfull';
-        }   
+      $insert="INSERT INTO servicesplan(title, summery, image) VALUES ('$title', '$summery', '$des')";
+      mysqli_query($db, $insert);
+      $_SESSION['message']='Add Successfull';
     }else{
       $_SESSION['message']='Add Error';
-    }    
+    }
+
   }
 ?>
 <div class="br-mainpanel">
@@ -58,23 +49,23 @@
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Titlt: <span class="tx-danger">*</span></label>
-                    <input class="form-control" type="text" name="title" value="" placeholder="Plan Title">
+                    <input class="form-control" type="text" name="title" value="" placeholder="Plan Title" >
                   </div>
-                </div>
+                </div><!-- col-4 -->             
 
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Summery: <span class="tx-danger">*</span></label>
-                    <input class="form-control" type="text" name="summery" value="" placeholder="Plan Summery">
+                    <input class="form-control" type="text" name="summery" value="" placeholder="description">
                   </div>
-                </div>
+                </div><!-- col-4 -->
 
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Image: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="file" name="image">
                   </div>
-                </div>
+                </div>  
 
                 </div>
                 <div class="form-layout-footer">

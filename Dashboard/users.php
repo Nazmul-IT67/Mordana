@@ -40,12 +40,12 @@
           ?>
           <thead class="thead-light">
             <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th class="text-center">ID</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Phone</th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody class="tx-white">

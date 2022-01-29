@@ -91,8 +91,15 @@
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-pie-graph tx-20"></i>
             <span class="menu-item-label">Services</span>
-          </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
+          </div>
+        </a>
+
+        <a href="pricing.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon icon fa fa-money tx-20"></i>
+            <span class="menu-item-label">Pricing</span>
+          </div>
+        </a>
 
         <a href="portfolios.php" class="br-menu-link">
           <div class="br-menu-item">
@@ -105,8 +112,15 @@
           <div class="br-menu-item">
             <i class="menu-item-icon fa fa-glass tx-20"></i>
             <span class="menu-item-label">About Us</span>
-          </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
+          </div>
+        </a>
+
+        <a href="contact.php" class="br-menu-link">
+          <div class="br-menu-item">
+            <i class="menu-item-icon fa fa-phone tx-20"></i>
+            <span class="menu-item-label">Contact Us</span>
+          </div>
+        </a>
 
         <a href="plan.php" class="br-menu-link">
           <div class="br-menu-item">

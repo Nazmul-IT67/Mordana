@@ -1,7 +1,7 @@
 <?php
   require_once'../db.php';
-  $select="SELECT * FROM plan";
-  $portfolio=mysqli_query($db, $select);
+  $select="SELECT * FROM servicesplan";
+  $plan=mysqli_query($db, $select);
   include'include/header.php';
 ?>
 <div class="br-mainpanel">
@@ -20,44 +20,31 @@
             <h2>Our Plan</h2>
           </div>         
             <a class="text-right" href="add-plan.php"><i class="fa fa-plus"></i>Add</a>          
-          <?php
-            if (isset($_SESSION['changestatus'])) {
-              ?>
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong><?php echo $_SESSION['changestatus'] ?>!</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <?php
-              unset($_SESSION['changestatus']);
-            }
-          ?>
           <thead class="thead-light">
             <tr>
-              <th>ID</th>
-              <th>Titlt</th>
-              <!-- <th>Summery</th> -->
-              <th>Image</th>
-              <th>Status</th>
+              <th class="text-center">ID</th>
+              <th class="text-center">Titlt</th>
+              <th class="text-center">Summery</th>
+              <th class="text-center">Image</th>
+              <th class="text-center">Status</th>
             </tr>
           </thead>
           <tbody class="tx-white">
-<!--             <?php
-              foreach ($portfolio as $key => $value) {
+            <?php
+              foreach ($plan as $key => $value) {
                 ?>
               <tr>
                 <td class="bg-dark"><?php echo ++$key?></td>
                 <td class="bg-dark"><?php echo $value['title'];?></td>
-                <!-- <td class="bg-dark"><?php echo $value['summery'];?></td> -->
+                <td class="bg-dark"><?php echo $value['summery'];?></td>
                 <td class="bg-dark">
-                  <img width="50" src="../assets/portfolio/image/<?php echo $value['image'];?>">
+                  <img width="50" src="../assets/portfolio/plan/<?php echo $value['image'];?>">
                 </td>
                 <td class="bg-dark"><?php echo $value['status'];?></td>
               </tr>
               <?php
               }
-            ?> -->          
+            ?>          
           </tbody>
         </table>
       </div>

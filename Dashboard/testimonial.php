@@ -20,27 +20,14 @@
             <h2>Tetstimonials</h2>
           </div>         
             <a class="text-right" href="add-tetstimonial.php"><i class="fa fa-plus"></i>Add</a>          
-          <?php
-            if (isset($_SESSION['changestatus'])) {
-              ?>
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong><?php echo $_SESSION['changestatus'] ?>!</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <?php
-              unset($_SESSION['changestatus']);
-            }
-          ?>
           <thead class="thead-light">
             <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Titlt</th>
-              <th>Image</th>
-              <th>Description</th>
-              <th>Status</th>
+              <th class="text-center">ID</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Titlt</th>
+              <th class="text-center">Image</th>
+              <th class="text-center">Description</th>
+              <th class="text-center">Status</th>
             </tr>
           </thead>
           <tbody class="tx-white">

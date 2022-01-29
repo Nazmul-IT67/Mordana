@@ -1,14 +1,14 @@
 <?php
   require_once'../db.php';
-  $select="SELECT * FROM services";
-  $services=mysqli_query($db, $select);
+  $select="SELECT * FROM pricing";
+  $price=mysqli_query($db, $select);
   include'include/header.php';
 ?>
 <div class="br-mainpanel">
   <div class="pd-30">
     <h6 class="tx-gray-800 mg-b-5">
       <a class="tx-white" href="dashboard.php">Dashboard /</a>
-      <a class="tx-white" href="#">Services</a>
+      <a class="tx-white" href="#">Prceing</a>
     </h6>
   </div>
 
@@ -17,41 +17,28 @@
       <div class="card mt-sm-3">     
         <table class="table table-bordered mt-30 text-center">
           <div class="text-center bg-dark">
-            <h2>Our Services</h2>
+            <h2>Services Prceing</h2>
           </div>         
-            <a class="text-right" href="add-service.php"><i class="fa fa-plus"></i>Add</a>          
+            <a class="text-right" href="add-prceing.php"><i class="fa fa-plus"></i>Add</a>          
           <thead class="thead-light">
             <tr>
               <th class="text-center">ID</th>
               <th class="text-center">Titlt</th>
-              <th class="text-center">Summary</th>
-              <th class="text-center">Icon</th>
+              <th class="text-center">Price</th>
+              <th class="text-center">Validaty</th>
               <th class="text-center">Status</th>
-              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody class="tx-white">
             <?php
-              foreach ($services as $key => $service) {
+              foreach ($price as $key => $service) {
                 ?>
-              <tr>
+               <tr>
                 <td class="bg-dark"><?php echo ++$key?></td>
                 <td class="bg-dark"><?php echo $service['title'];?></td>
-                <td class="bg-dark"><?php echo $service['description'];?></td>
-                <td class="bg-dark"><?php echo $service['icon'];?></td>
+                <td class="bg-dark"><?php echo $service['doller'];?></td>
+                <td class="bg-dark"><?php echo $service['validati'];?></td>
                 <td class="bg-dark"><?php echo $service['status'];?></td>
-                <td class="bg-dark"><?php
-                      if ($service['status']==1) {
-                        ?>
-                        <a href="status.php?status_id=<?php echo $service['id']?>" class="btn btn-secondary">Active</a>
-                        <?php
-                      }else{
-                        ?>
-                        <a href="status.php?status_id=<?php echo $service['id']?>" class="btn btn-danger">Deactive</a>
-                        <?php
-                      }
-                    ?>  
-                </td>
               </tr>
               <?php
               }

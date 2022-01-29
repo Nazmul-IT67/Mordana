@@ -23,11 +23,11 @@
           <a class="text-right" href="add-whyus.php"><i class="fa fa-plus"></i>Add</a>
           <thead class="thead-light text-center">
             <tr>
-              <th>ID</th>
-              <th>Titlt</th>
-              <th>Icon</th>
-              <th>Summery</th>
-              <th>Status</th>
+              <th class="text-center">ID</th>
+              <th class="text-center">Titlt</th>
+              <th class="text-center">Icon</th>
+              <th class="text-center">Summery</th>
+              <th class="text-center">Status</th>
             </tr>
           </thead>
           <tbody class="tx-white text-center">
