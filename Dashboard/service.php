@@ -22,9 +22,9 @@
             <a class="text-right" href="add-service.php"><i class="fa fa-plus"></i>Add</a>          
           <thead class="thead-light">
             <tr>
-              <th class="text-center">ID</th>
+            <th class="text-center">ID</th>
               <th class="text-center">Titlt</th>
-              <th class="text-center">Summary</th>
+              <th class="text-center" style="width:350px">Summery</th>
               <th class="text-center">Icon</th>
               <th class="text-center">Status</th>
               <th class="text-center">Action</th>
@@ -39,18 +39,31 @@
                 <td class="bg-dark"><?php echo $service['title'];?></td>
                 <td class="bg-dark"><?php echo $service['description'];?></td>
                 <td class="bg-dark"><?php echo $service['icon'];?></td>
-                <td class="bg-dark"><?php echo $service['status'];?></td>
                 <td class="bg-dark"><?php
                       if ($service['status']==1) {
                         ?>
-                        <a href="status.php?status_id=<?php echo $service['id']?>" class="btn btn-secondary">Active</a>
+                        <a href="s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-secondary">Active</a>
                         <?php
                       }else{
                         ?>
-                        <a href="status.php?status_id=<?php echo $service['id']?>" class="btn btn-danger">Deactive</a>
+                        <a href="s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-danger">Deactive</a>
                         <?php
                       }
                     ?>  
+                </td>
+                <td class="bg-dark">
+                  <?php
+                    if ($service['status']==1) {
+                      ?>
+                        <a href="" class="btn btn-secondary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                      <?php
+                    }else{
+                      ?>
+                        <a href="" class="btn btn-danger">Not Allow</a>
+                      <?php
+                    }
+                  ?>
                 </td>
               </tr>
               <?php

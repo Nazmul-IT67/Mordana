@@ -7,20 +7,20 @@
 
   $select="SELECT * FROM whyus";
   $whyus=mysqli_query($db, $select);
-
+ 
   $select="SELECT * FROM video";
   $section=mysqli_query($db, $select);
 
-  $select="SELECT * FROM features WHERE id=1";
+  $select="SELECT * FROM features WHERE id=1 && status=1"; 
   $features=mysqli_query($db, $select);
 
-  $select4="SELECT * FROM features WHERE id=4";
+  $select4="SELECT * FROM features WHERE id=4 && status=1";
   $features4=mysqli_query($db, $select4);
 
-  $select6="SELECT * FROM features WHERE id=6";
+  $select6="SELECT * FROM features WHERE id=6 && status=1";
   $features6=mysqli_query($db, $select6);
 
-  $select7="SELECT * FROM features WHERE id=7";
+  $select7="SELECT * FROM features WHERE id=7 && status=1";
   $features7=mysqli_query($db, $select7);     
 ?>
   <!-- ======= Hero Section ======= -->

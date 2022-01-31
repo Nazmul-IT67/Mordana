@@ -1,7 +1,7 @@
 <?php
   include'mordana/header.php';
   require_once'db.php';
-  $select="SELECT * FROM portfolio";
+  $select="SELECT * FROM portfolio WHERE status=1";
   $portfolio=mysqli_query($db, $select);
 ?>
 <body>
@@ -12,8 +12,6 @@
 
       <div class="logo">
         <h1 class="text-light"><a href="index.php"><span>Moderna</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">

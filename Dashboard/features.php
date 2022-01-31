@@ -19,15 +19,29 @@
           <div class="text-center bg-dark">
             <h2>Our Features</h2>
           </div>         
-            <a class="text-right" href="add-features.php"><i class="fa fa-plus"></i>Add</a>          
+            <a class="text-right" href="add-features.php"><i class="fa fa-plus"></i>Add</a>
+          <?php
+            if (isset($_SESSION['changestatus'])) {
+              ?>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong><?php echo $_SESSION['changestatus'] ?>!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <?php
+              unset($_SESSION['changestatus']);
+            }
+          ?>            
           <thead class="thead-light">
             <tr>
               <th class="text-center">ID</th>
-              <th class="text-center">Titlt</th>
+              <th class="text-center" style="width:150px">Titlt</th>
               <th class="text-center">Icon</th>
-              <th class="text-center">Description</th>
+              <th class="text-center" style="width:250px">Description</th>
               <th class="text-center">Image</th>
               <th class="text-center">Status</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
           <tbody class="tx-white">
@@ -40,7 +54,33 @@
                 <td class="bg-dark"><?php echo $service['icon'];?></td>
                 <td class="bg-dark"><?php echo $service['description'];?></td>
                 <td class="bg-dark"><?php echo $service['image'];?></td>
-                <td class="bg-dark"><?php echo $service['status'];?></td>
+                <td class="bg-dark">
+                <?php
+                if ($service['status']==1) {
+                  ?>
+                    <a href="status/fstatus.php?features_id=<?php echo$service['id']?>" class="btn btn-secondary">Active</a>
+                  <?php
+                }else{
+                  ?>
+                  <a href="status/fstatus.php?features_id=<?php echo$service['id']?>" class="btn btn-danger">Dective</a> 
+                  <?php
+                }               
+                ?>
+                </td>
+                <td class="bg-dark">
+                  <?php
+                    if ($service['status']==1) {
+                      ?>
+                        <a href="../edit.php?edit_id=<?php echo $service['id']?>" class="btn btn-secondary">Edit</a>
+                        <a href="../delete.php?delete_id=<?php echo $service['id']?>" class="btn btn-danger">Delete</a>
+                      <?php
+                    }else{
+                      ?>
+                        <a class="btn btn-success">Not Allow</a>
+                      <?php
+                    }
+                  ?>
+                </td>
               </tr>
               <?php
               }

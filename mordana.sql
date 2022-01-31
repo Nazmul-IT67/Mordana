@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2022 at 12:44 PM
+-- Generation Time: Jan 31, 2022 at 02:42 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -70,7 +70,8 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `status`) VALUES
 (1, 'Nazmul Islam', 'nazmulns8989@gmail.com', 'Phone Number Change', 'Hello', 1),
 (2, 'Nazmul Islam', 'nazmul@gmail.com', 'Phone Number Change', 'Hi, There', 1),
-(3, 'Nazmul Islam', 'nazmul.islam.spi33@gmail.com', 'Phone Number Change', 'Hello, Everyone', 1);
+(3, 'Nazmul Islam', 'nazmul.islam.spi33@gmail.com', 'Phone Number Change', 'Hello, Everyone', 1),
+(4, 'Nazmul Islam Talukder', 'hafizur@gmail.com', 'Phone Number Change', 'hello', 1);
 
 -- --------------------------------------------------------
 
@@ -121,10 +122,10 @@ INSERT INTO `portfolio` (`id`, `title`, `image`, `status`) VALUES
 (3, 'Development', 'portfolio-1.jpg', 1),
 (4, 'Marketing', 'portfolio-2.jpg', 1),
 (5, 'APP', 'portfolio-4.jpg', 1),
-(6, 'Beauti', 'portfolio-details-2.jpg', 1),
 (8, 'Foods', 'portfolio-9.jpg', 1),
 (9, 'Drink', 'portfolio-5.jpg', 1),
-(10, 'Sweets', 'portfolio-4.jpg', 1);
+(10, 'Sweets', 'portfolio-4.jpg', 1),
+(11, 'Beauty', 'portfolio-7.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -282,7 +283,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `status`) VALUES
-(1, 'Nazmul Islam', 'nazmul.cse67@gmail.com', '01940475267', '$2y$10$BjvS/1vWUto9vQOYAC6CgedAlCt3BarwtrcFNZzbRA/w3vRYz4.IG', 2),
+(1, 'Nazmul Islam', 'nazmul.cse67@gmail.com', '01940475267', '$2y$10$BjvS/1vWUto9vQOYAC6CgedAlCt3BarwtrcFNZzbRA/w3vRYz4.IG', 1),
 (2, 'Nazmul Talukder', 'nazmulns8989@gmail.com', '01889687828', '$2y$10$a8YCmWV6kX.BYV8LcRkSF.5EcJ1TeFMIylvflK2oyNNn1QnpB02JW', 1),
 (3, 'Farabi Islam', 'nazmulsn@gmail.com', '01638096733', '$2y$10$TgakP8cP4uGLY34DLtHqLOtTc4vYElf4OZCQ87FxqoiJL8K9axFlS', 1),
 (4, 'Farhan', 'nazmul.islam.spi33@gmail.com', '01795528329', '$2y$10$bB4CRt8V.HeLgA9giHIS4.rkEo3.o0QD3xxlCrvseMNrWqdi9xpV6', 1),
@@ -427,7 +428,7 @@ ALTER TABLE `abouts`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `features`
@@ -439,7 +440,7 @@ ALTER TABLE `features`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pricing`
