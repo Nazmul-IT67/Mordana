@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2022 at 02:42 PM
+-- Generation Time: Jan 31, 2022 at 03:13 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -178,8 +178,8 @@ CREATE TABLE `services` (
 INSERT INTO `services` (`id`, `title`, `description`, `icon`, `status`) VALUES
 (1, 'Web Development', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bx-file', 1),
 (2, 'Digital Marketing', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bxl-dribbble', 1),
-(3, 'Unlimited Support', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bx-tachometer', 1),
-(4, 'WordPress Website', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bx-world', 1);
+(4, 'WordPress Website', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bx-world', 1),
+(6, 'Unlimited Supported', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'bx bx-tachometer', 1);
 
 -- --------------------------------------------------------
 
@@ -452,7 +452,7 @@ ALTER TABLE `pricing`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `servicesplan`

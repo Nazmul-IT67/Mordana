@@ -19,7 +19,22 @@
           <div class="text-center bg-dark">
             <h2>Our Services</h2>
           </div>         
-            <a class="text-right" href="add-service.php"><i class="fa fa-plus"></i>Add</a>          
+            <a class="text-right" href="add-service.php"><i class="fa fa-plus"></i>Add</a>
+
+          <?php
+            if (isset($_SESSION['changestatus'])) {
+              ?>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong><?php echo $_SESSION['changestatus'] ?>!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <?php
+              unset($_SESSION['changestatus']);
+            }
+          ?> 
+            
           <thead class="thead-light">
             <tr>
             <th class="text-center">ID</th>
@@ -42,11 +57,11 @@
                 <td class="bg-dark"><?php
                       if ($service['status']==1) {
                         ?>
-                        <a href="s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-secondary">Active</a>
+                        <a href="status/s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-secondary">Active</a>
                         <?php
                       }else{
                         ?>
-                        <a href="s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-danger">Deactive</a>
+                        <a href="status/s-status.php?sstatus_id=<?php echo $service['id']?>" class="btn btn-danger">Deactive</a>
                         <?php
                       }
                     ?>  
@@ -55,12 +70,12 @@
                   <?php
                     if ($service['status']==1) {
                       ?>
-                        <a href="" class="btn btn-secondary">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="#?edit_id=<?php echo$service['id']?>" class="btn btn-secondary">Edit</a>
+                        <a href="delete/s-delete.php?delete_id=<?php echo$service['id']?>" class="btn btn-danger">Delete</a>
                       <?php
                     }else{
                       ?>
-                        <a href="" class="btn btn-danger">Not Allow</a>
+                        <a class="btn btn-danger">Not Allow</a>
                       <?php
                     }
                   ?>

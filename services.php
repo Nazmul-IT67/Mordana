@@ -1,7 +1,7 @@
 <?php
   include'mordana/header.php';
   require_once'db.php';
-  $select="SELECT * FROM services";
+  $select="SELECT * FROM services WHERE status=1";
   $services=mysqli_query($db, $select);
 
   $select="SELECT * FROM whyus";

@@ -47,13 +47,11 @@
 		if ($valid_name && $valid_email) {		
 			$insert="UPDATE users SET name='$valid_name', email='$valid_email' WHERE id=$id";
 			if (mysqli_query($db, $insert)) {
-				// header('location:user.php');
 				header('location:Dashboard/users.php');
 			}else{
 				// header('location:user.php');
 			}
 		}else{
-			// header('location:user.php');
 			header('location:Dashboard/users.php');
 		}
 	}
